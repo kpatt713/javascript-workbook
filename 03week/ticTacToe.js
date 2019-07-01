@@ -24,7 +24,9 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  if (playerTurn = [0,0] && [0,1] && [0,2]);
+  else if (playerTurn = [1,0] && [1,1] && [1,2]);
+  else (playerTurn = [2,0] && [2,1] && [2,2]);
 }
 
 function verticalWin() {
@@ -41,6 +43,10 @@ function checkForWin() {
 
 function ticTacToe(row, column) {
   // Your code here
+}
+
+function isValid() {
+  
 }
 
 function getPrompt() {
