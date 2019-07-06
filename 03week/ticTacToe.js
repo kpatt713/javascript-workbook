@@ -54,12 +54,24 @@ function verticalWin() {
   }
 
 function diagonalWin() {
-  // Your code here
+  if (
+    (board[0][0] === playerTurn &&
+    board[1][1] === playerTurn &&
+    board[2][2] === playerTurn) ||
+    (board[0][2] === playerTurn && board[1][1] === playerTurn && board[2][0])
+    ) {
+    return true;
+    } else {
+    return false;
+    }
 }
 
 function checkForWin() {
-  // Your code here
-
+  if (horizontalWin() || verticalWin() || diagonalWin()) {
+    return true;
+    } else {
+    return false;
+  }
 }
 
 function ticTacToe(row, column) {
@@ -86,7 +98,9 @@ function isValid(row, column) {
 
 const switchPlayer = () => {
   if playerTurn = 'X' && isValid {
-    let playerTurn = 'Y'
+    let playerTurn = 'Y';
+  } else playerTurn = 'Y' && isValid {
+    playerTurn = 'X';
   }
 }
 
