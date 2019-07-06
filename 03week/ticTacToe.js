@@ -24,12 +24,34 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
-}
+  if (
+    (board[0][0] === playerTurn &&
+    board[0][1] === playerTurn &&
+    board[0][2] === playerTurn) ||
+    (board[1][0] === playerTurn &&
+    board[1][1] === playerTurn &&
+    board[1][2]) === playerTurn ||
+    (board[2][0] === playerTurn &&
+    board[2][1] === playerTurn &&
+    board[2][2]) === playerTurn
+    ) {
+    return true;
+    } else {
+    return false;
+    }
+    }
 
 function verticalWin() {
-  // Your code here
-}
+  if (
+    (board[0][0] === playerTurn && board[1][0] === playerTurn && board[2][0]) ||
+    (board[0][1] === playerTurn && board[1][1] === playerTurn && board[2][1]) ||
+    (board[2][0] === playerTurn && board[2][1] === playerTurn && board[2][2])
+    ) {
+    return true;
+    } else {
+    return false;
+    }
+  }
 
 function diagonalWin() {
   // Your code here
@@ -37,10 +59,35 @@ function diagonalWin() {
 
 function checkForWin() {
   // Your code here
+
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+  if (validInput(row,column)) {
+    if (isValid (row,column)) {
+      board[row][column] = playerTurn;
+      if (checkForWin) = true {
+        console.log(playerTurn + " wins!")
+      } else switchPlayer;
+    } 
+  }
+}
+
+const validInput = (row, column) => {
+  if ((row >= 0 && row <= 2) && (column >= 0 && column <= 2)) {
+    return true;
+  }
+}
+
+function isValid(row, column) {
+  if(board [row][column] == ' ')
+  return true;
+}
+
+const switchPlayer = () => {
+  if playerTurn = 'X' && isValid {
+    let playerTurn = 'Y'
+  }
 }
 
 function getPrompt() {
@@ -54,6 +101,8 @@ function getPrompt() {
   });
 
 }
+
+
 
 
 
