@@ -104,6 +104,10 @@ const switchPlayer = () => {
   }
 }
 
+function isValid() {
+  
+}
+
 function getPrompt() {
   printBoard();
   console.log("It's Player " + playerTurn + "'s turn.");
