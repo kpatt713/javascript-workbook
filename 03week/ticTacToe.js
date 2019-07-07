@@ -24,25 +24,84 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  if (playerTurn = [0,0] && [0,1] && [0,2]);
-  else if (playerTurn = [1,0] && [1,1] && [1,2]);
-  else (playerTurn = [2,0] && [2,1] && [2,2]);
-}
+  if (
+    (board[0][0] === playerTurn &&
+    board[0][1] === playerTurn &&
+    board[0][2] === playerTurn) ||
+    (board[1][0] === playerTurn &&
+    board[1][1] === playerTurn &&
+    board[1][2]) === playerTurn ||
+    (board[2][0] === playerTurn &&
+    board[2][1] === playerTurn &&
+    board[2][2]) === playerTurn
+    ) {
+    return true;
+    } else {
+    return false;
+    }
+    }
 
 function verticalWin() {
-  // Your code here
-}
+  if (
+    (board[0][0] === playerTurn && board[1][0] === playerTurn && board[2][0]) ||
+    (board[0][1] === playerTurn && board[1][1] === playerTurn && board[2][1]) ||
+    (board[2][0] === playerTurn && board[2][1] === playerTurn && board[2][2])
+    ) {
+    return true;
+    } else {
+    return false;
+    }
+  }
 
 function diagonalWin() {
-  // Your code here
+  if (
+    (board[0][0] === playerTurn &&
+    board[1][1] === playerTurn &&
+    board[2][2] === playerTurn) ||
+    (board[0][2] === playerTurn && board[1][1] === playerTurn && board[2][0])
+    ) {
+    return true;
+    } else {
+    return false;
+    }
 }
 
 function checkForWin() {
-  // Your code here
+  if (horizontalWin() || verticalWin() || diagonalWin()) {
+    return true;
+    } else {
+    return false;
+  }
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+  if (validInput(row,column)) {
+    if (isValid (row,column)) {
+      board[row][column] = playerTurn;
+      if (checkForWin) = true {
+        console.log(playerTurn + " wins!")
+      } else switchPlayer;
+    } 
+  }
+}
+
+const validInput = (row, column) => {
+  if ((row >= 0 && row <= 2) && (column >= 0 && column <= 2)) {
+    return true;
+  }
+}
+
+function isValid(row, column) {
+  if(board [row][column] == ' ')
+  return true;
+}
+
+const switchPlayer = () => {
+  if playerTurn = 'X' && isValid {
+    let playerTurn = 'Y';
+  } else playerTurn = 'Y' && isValid {
+    playerTurn = 'X';
+  }
 }
 
 function isValid() {
@@ -60,6 +119,8 @@ function getPrompt() {
   });
 
 }
+
+
 
 
 
