@@ -9,7 +9,9 @@ const rl = readline.createInterface({
 
 
 function pigLatin(word) {
-  word = word.trim().toLowerCase();
+  let txtInput = document.getElementById("word");
+  word = txtInput.value.trim().toLowerCase();
+  let txtOutput = document.getElementById("result");
   const vowels = ['a', 'e', 'i', 'o', 'u'];
   let vowelPosition = 0;
 
@@ -22,7 +24,7 @@ function pigLatin(word) {
         break;
       }
     }
-    return word.slice(vowelPosition) + word.slice(0, vowelPosition) + "ay";
+    return txtOutput.value = word.slice(vowelPosition) + word.slice(0, vowelPosition) + "ay";
   }
 }
 
