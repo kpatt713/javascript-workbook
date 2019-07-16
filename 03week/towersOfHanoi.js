@@ -22,23 +22,31 @@ function printStacks() {
 function movePiece(startStack, endStack) {
   let disk = stacks[startStack].pop();
   stacks[endStack].push(disk);
-
-
 }
 
 function isLegal() {
   //if endstack value is less than the startstack value, return "invalid move".
-  if (stacks.endStack < startStack)
+  if (stacks.endStack < startStack) {
+    return "Move is invalid";
+  } else (stacks.endStack > startStack) {
+    movePiece;
+  }
   //else if endstack value is greater than the startstack value, movePiece; 
-
 }
 
 function checkForWin() {
-  // Your code here
-
+  if (stacks = { a: [], b: [4, 3, 2, 1], c: [] } || { a: [], b: [], c: [4, 3, 2, 1] }) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function towersOfHanoi(startStack, endStack) {
+  if isLegal() {
+    
+  }
+
   movePiece(startStack, endStack);
 
 }
