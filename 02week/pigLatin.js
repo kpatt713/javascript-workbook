@@ -7,16 +7,16 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-
-function pigLatin(word) {
+document.getElementById("submit").onsubmit = function pigLatin(word) {
   let txtInput = document.getElementById("word");
-  word = txtInput.value.trim().toLowerCase();
+  let word = txtInput.value.trim().toLowerCase();
   let txtOutput = document.getElementById("result");
   const vowels = ['a', 'e', 'i', 'o', 'u'];
   let vowelPosition = 0;
+ 
 
   if (vowels.includes(word[0])) {
-    return word + "yay";
+    return txtOutput.value + "yay";
   } else {
     for (let char of word) {
       if (vowels.includes(char)) {
@@ -25,7 +25,7 @@ function pigLatin(word) {
       }
     }
     return txtOutput.value = word.slice(vowelPosition) + word.slice(0, vowelPosition) + "ay";
-  }
+  } 
 }
 
 
