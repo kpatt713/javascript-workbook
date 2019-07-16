@@ -19,13 +19,17 @@ function printStacks() {
   console.log("c: " + stacks.c);
 }
 
-function movePiece() {
-  // Your code here
+function movePiece(startStack, endStack) {
+  let disk = stacks[startStack].pop();
+  stacks[endStack].push(disk);
+
 
 }
 
 function isLegal() {
-  // Your code here
+  //if endstack value is less than the startstack value, return "invalid move".
+  if (stacks.endStack < startStack)
+  //else if endstack value is greater than the startstack value, movePiece; 
 
 }
 
@@ -35,7 +39,7 @@ function checkForWin() {
 }
 
 function towersOfHanoi(startStack, endStack) {
-  // Your code here
+  movePiece(startStack, endStack);
 
 }
 
